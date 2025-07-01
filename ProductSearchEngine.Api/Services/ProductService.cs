@@ -1,4 +1,5 @@
 using OpenSearch.Client;
+using OpenSearch.Net;
 using ProductSearchEngine.Api.Models;
 
 namespace ProductSearchEngine.Api.Services

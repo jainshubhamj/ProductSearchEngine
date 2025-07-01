@@ -1,0 +1,72 @@
+[
+    {
+      "title": "Nike Air Max 270",
+      "description": "Revolutionary Air Max 270 delivers incredible all-day comfort with the tallest Air unit yet.",
+      "category": "Footwear",
+      "price": 150.00,
+      "brand": "Nike",
+      "sku": "AH8050-001",
+      "attributes": {
+        "size": "10",
+        "color": "Black",
+        "material": "Mesh"
+      },
+      "tags": ["running", "casual", "comfortable"]
+    },
+    {
+      "title": "Adidas Ultraboost 22",
+      "description": "Experience endless energy return with Ultraboost 22 running shoes featuring BOOST midsole.",
+      "category": "Footwear",
+      "price": 180.00,
+      "brand": "Adidas",
+      "sku": "GZ0127",
+      "attributes": {
+        "size": "9.5",
+        "color": "White",
+        "material": "Primeknit"
+      },
+      "tags": ["running", "performance", "boost"]
+    },
+    {
+      "title": "Apple iPhone 14 Pro",
+      "description": "iPhone 14 Pro features the A16 Bionic chip, Dynamic Island, and Pro camera system.",
+      "category": "Electronics",
+      "price": 999.00,
+      "brand": "Apple",
+      "sku": "MPXR3LL/A",
+      "attributes": {
+        "storage": "128GB",
+        "color": "Deep Purple",
+        "screen": "6.1 inch"
+      },
+      "tags": ["smartphone", "premium", "camera"]
+    },
+    {
+      "title": "Samsung Galaxy S23 Ultra",
+      "description": "Galaxy S23 Ultra with 200MP camera, S Pen, and powerful performance for productivity.",
+      "category": "Electronics",
+      "price": 1199.00,
+      "brand": "Samsung",
+      "sku": "SM-S918U",
+      "attributes": {
+        "storage": "256GB",
+        "color": "Phantom Black",
+        "screen": "6.8 inch"
+      },
+      "tags": ["smartphone", "premium", "s-pen"]
+    },
+    {
+      "title": "Sony WH-1000XM5",
+      "description": "Industry-leading noise canceling headphones with exceptional sound quality.",
+      "category": "Audio",
+      "price": 399.00,
+      "brand": "Sony",
+      "sku": "WH1000XM5/B",
+      "attributes": {
+        "type": "Over-ear",
+        "color": "Black",
+        "connectivity": "Bluetooth"
+      },
+      "tags": ["headphones", "noise-canceling", "wireless"]
+    }
+  ]

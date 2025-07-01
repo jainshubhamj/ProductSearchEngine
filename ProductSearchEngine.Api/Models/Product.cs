@@ -35,7 +35,7 @@ namespace ProductSearchEngine.Api.Models
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         
         // Future AI field - vector embeddings
-        [DenseVector(Dimensions = 768)]
+        //[DenseVector(Dimensions = 768)]
         public float[]? EmbeddingVector { get; set; }
         
         [Keyword]
