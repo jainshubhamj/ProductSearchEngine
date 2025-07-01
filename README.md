@@ -9,22 +9,13 @@ A search engine implementation using OpenSearch backend and .NET 8 API with face
    docker-compose up -d
    ```
 
-2. **Create and run the .NET project**:
-   ```bash
-   dotnet new webapi -n ProductSearchEngine.Api
-   cd ProductSearchEngine.Api
-   dotnet add package OpenSearch.Client
-   dotnet add package Swashbuckle.AspNetCore
-   ```
-
-3. **Replace the generated files with the code above**
-
-4. **Run the application**:
+2. **Run the application**:
+   Open the terminal in "ProductSearchEngine.Api" folder
    ```bash
    dotnet run
    ```
 
-5. **Test the API**:
+3. **Test the API**:
    - Navigate to `https://localhost:7000/swagger` (or the port shown in console)
    - Upload sample data using the bulk endpoint
    - Test search functionality
@@ -175,81 +166,6 @@ GET /api/search/suggestions?prefix=nik&size=10
 }
 ```
 
-### appsettings.Development.json
-```json
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  },
-  "ConnectionStrings": {
-    "OpenSearch": "http://localhost:9200"
-  }
-}
-```
-
-## Testing Scripts
-
-### PowerShell Script to Load Sample Data
-```powershell
-# load-sample-data.ps1
-$baseUrl = "https://localhost:7000"
-$sampleDataPath = "sample-data/products.json"
-
-# Read and parse JSON
-$products = Get-Content $sampleDataPath | ConvertFrom-Json
-
-# Upload bulk data
-$response = Invoke-RestMethod -Uri "$baseUrl/api/products/bulk" `
-    -Method POST `
-    -Body ($products | ConvertTo-Json -Depth 10) `
-    -ContentType "application/json" `
-    -SkipCertificateCheck
-
-Write-Output "Upload result: $($response.message)"
-
-# Test search
-$searchResult = Invoke-RestMethod -Uri "$baseUrl/api/search?q=nike&pageSize=5" `
-    -Method GET `
-    -SkipCertificateCheck
-
-Write-Output "Found $($searchResult.totalCount) products"
-Write-Output "First product: $($searchResult.products[0].title)"
-```
-
-### Bash Script to Load Sample Data
-```bash
-#!/bin/bash
-# load-sample-data.sh
-
-BASE_URL="https://localhost:7000"
-SAMPLE_DATA="sample-data/products.json"
-
-echo "Loading sample data..."
-
-# Upload bulk data
-curl -X POST "$BASE_URL/api/products/bulk" \
-  -H "Content-Type: application/json" \
-  -d @$SAMPLE_DATA \
-  -k
-
-echo -e "\n\nTesting search..."
-
-# Test search
-curl -X GET "$BASE_URL/api/search?q=nike&pageSize=5" \
-  -H "Accept: application/json" \
-  -k
-
-echo -e "\n\nTesting suggestions..."
-
-# Test suggestions
-curl -X GET "$BASE_URL/api/search/suggestions?prefix=nik&size=5" \
-  -H "Accept: application/json" \
-  -k
-```
-
 ## Troubleshooting
 
 ### Common Issues
@@ -275,6 +191,9 @@ curl -X GET "$BASE_URL/api/search/suggestions?prefix=nik&size=5" \
    - Consider adding more replicas for read-heavy workloads
 
 ### Health Checks
+
+#### OpenSearch Dashboards
+Check OpenSearch Dashboards at `http://localhost:5601`
 
 #### OpenSearch Health
 ```bash

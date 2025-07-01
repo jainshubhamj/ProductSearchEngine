@@ -5,9 +5,11 @@ namespace ProductSearchEngine.Api.Configuration
 {
     public static class OpenSearchConfiguration
     {
+        private const string DefaultOpenSearchUrl = "http://localhost:9200";
+
         public static IServiceCollection AddOpenSearch(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("OpenSearch") ?? "http://localhost:9200";
+            var connectionString = configuration.GetConnectionString("OpenSearch") ?? DefaultOpenSearchUrl;
             
             var settings = new ConnectionSettings(new Uri(connectionString))
                 .DefaultIndex("products")

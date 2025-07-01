@@ -5,7 +5,7 @@
       "category": "Footwear",
       "price": 150.00,
       "brand": "Nike",
-      "sku": "AH8050-001",
+      "sku": "101",
       "attributes": {
         "size": "10",
         "color": "Black",
@@ -19,7 +19,7 @@
       "category": "Footwear",
       "price": 180.00,
       "brand": "Adidas",
-      "sku": "GZ0127",
+      "sku": "102",
       "attributes": {
         "size": "9.5",
         "color": "White",
@@ -33,7 +33,7 @@
       "category": "Electronics",
       "price": 999.00,
       "brand": "Apple",
-      "sku": "MPXR3LL/A",
+      "sku": "201",
       "attributes": {
         "storage": "128GB",
         "color": "Deep Purple",
@@ -47,7 +47,7 @@
       "category": "Electronics",
       "price": 1199.00,
       "brand": "Samsung",
-      "sku": "SM-S918U",
+      "sku": "202",
       "attributes": {
         "storage": "256GB",
         "color": "Phantom Black",
@@ -61,7 +61,7 @@
       "category": "Audio",
       "price": 399.00,
       "brand": "Sony",
-      "sku": "WH1000XM5/B",
+      "sku": "301",
       "attributes": {
         "type": "Over-ear",
         "color": "Black",

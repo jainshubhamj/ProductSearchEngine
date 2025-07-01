@@ -54,3 +54,4 @@ TestResult.xml
 nunit-*.xml
 /.vs
 /ProductSearchEngine/.vs/ProductSearchEngine
+/ProductSearchEngine/.vs/ProjectEvaluation
