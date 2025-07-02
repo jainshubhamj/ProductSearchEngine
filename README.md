@@ -22,6 +22,9 @@ A search engine implementation using OpenSearch backend and .NET 8 API with face
 
 ## API Endpoints
 
+### API Documentation: 
+Swagger UI: `https://localhost:7000/swagger`
+
 ### Product Management
 
 #### POST /api/products
@@ -146,49 +149,6 @@ GET /api/search/suggestions?prefix=nik&size=10
   ]
 }
 ```
-
-## Configuration
-
-### appsettings.json
-```json
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning",
-      "OpenSearch.Client": "Information"
-    }
-  },
-  "AllowedHosts": "*",
-  "ConnectionStrings": {
-    "OpenSearch": "http://localhost:9200"
-  }
-}
-```
-
-## Troubleshooting
-
-### Common Issues
-
-1. **OpenSearch connection failed**
-   - Ensure OpenSearch is running: `docker ps`
-   - Check logs: `docker logs opensearch`
-   - Verify port 9200 is accessible: `curl http://localhost:9200`
-
-2. **Index creation failed**
-   - Check OpenSearch logs for detailed errors
-   - Verify OpenSearch has sufficient memory
-   - Ensure no existing index conflicts
-
-3. **Search returns no results**
-   - Verify data was indexed: Check OpenSearch Dashboards at `http://localhost:5601`
-   - Check index mapping: `curl http://localhost:9200/products/_mapping`
-   - Verify search syntax in logs
-
-4. **Performance issues**
-   - Monitor OpenSearch heap usage
-   - Adjust JVM settings in docker-compose.yml
-   - Consider adding more replicas for read-heavy workloads
 
 ### Health Checks
 
